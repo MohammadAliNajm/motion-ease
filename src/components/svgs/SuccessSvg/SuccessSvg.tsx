@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 
-const SuccessSvg = ({ color }) => {
+const SuccessSvg = () => {
 
 
     const containerVariants = {
@@ -22,51 +22,28 @@ const SuccessSvg = ({ color }) => {
 
 
     return (
-        <motion.div
-            style={{ width: '50%', height: '50%' }}
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-           
 
+        <motion.svg
+          
+           width={'50'}
+           height={25}
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
         >
-            <motion.svg
-                width="50"
-                height="50"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <motion.circle
-                    cx="50%"
-                    cy="50%"
-                    r="40%"
-                    fill="none"
-                    stroke={color}
-                    transition={{
-                        type: "spring",
-                        duration:2
-                    }}
-                    strokeWidth={2}
-                    variants={circleVariants}
-                    initial="hidden"
-                    animate="visible"
+            <motion.circle variants={circleVariants} initial="hidden" animate="visible" cx="50%" cy="50%" r="40%" fill="none" stroke="white" strokeWidth="2" />
 
-                />
-                <motion.path
-                    d="M10 25 l10 10 l20 -20"
-                    fill="none"
-                    stroke={color}
-                    strokeWidth={2}
-                    variants={checkVariants}
-                    initial="hidden"
-                    animate="visible"
-                    transition={{
-                        type: "spring",
-                        duration:2.5
-                    }}
+            <motion.path
+                initial="hidden"
+                animate="visible"
+                variants={checkVariants}
+                d="M30 50 L45 65 L70 40"
+                fill="none"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+            />
+        </motion.svg>
 
-                />
-            </motion.svg>
-        </motion.div>
     );
 }
 
