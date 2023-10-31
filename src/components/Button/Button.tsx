@@ -54,7 +54,7 @@ newHeight = height -20;
   
  
   return (
-    <>
+    <div style={{display:'flex',justifyContent:'center'}}>
       <motion.button
         id='Button'
         className='Button'
@@ -65,7 +65,7 @@ newHeight = height -20;
           duration: 1,
 
         }}
-        style={{ backgroundColor: color }}
+        style={{ backgroundColor: color, }}
         disabled={isLoading ? isdisabled : disabled}
         onClick={onClick}
 
@@ -81,7 +81,7 @@ newHeight = height -20;
             <FailSvg />
           </div>
         ) : isLoading ? (
-          <div className='LoadingBtn'>
+          <div className='LoadingBtn' style={{width:newWidth,height:newHeight}}>
             <p className='loadingtxt'>{text}</p>
             <Loader />
           </div>
@@ -91,7 +91,7 @@ newHeight = height -20;
 
 
       </motion.button>
-    </>
+    </div>
 
   )
 }

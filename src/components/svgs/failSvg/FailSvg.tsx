@@ -28,7 +28,7 @@ const FailSvg = () => {
                 r="40%"
                 fill="none"
                 stroke="white"
-                strokeWidth="2"
+                strokeWidth="4"
                  initial="hidden"
                 animate="visible"
                 transition={{
@@ -41,7 +41,7 @@ const FailSvg = () => {
                 initial="hidden"
                 animate="visible"
                 stroke="white"
-                strokeWidth="2"
+                strokeWidth="4"
                 strokeLinecap="round"
                 transition={{
                     duration:1

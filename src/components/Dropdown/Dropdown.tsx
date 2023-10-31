@@ -50,8 +50,9 @@ const  Dropdown =  (props:DropDownProps) =>  {
                 whileTap={{ scale: 0.97 }}
                 onClick={() => setIsOpen(!isOpen)}
             >
-                Menu
+                Menu 
                 <motion.div
+                className="btnArrow"
                     variants={{
                         open: { rotate: 180 },
                         closed: { rotate: 0 }
@@ -65,14 +66,15 @@ const  Dropdown =  (props:DropDownProps) =>  {
                 </motion.div>
             </motion.button>
             <motion.ul
+            className="btnList"
                 variants={listVariants}
                 style={{ pointerEvents: isOpen ? "auto" : "none", backgroundColor: `${listColor}`}}
             >
-                <motion.li variants={itemVariants}>Item 1 </motion.li>
-                <motion.li variants={itemVariants}>Item 2 </motion.li>
-                <motion.li variants={itemVariants}>Item 3 </motion.li>
-                <motion.li variants={itemVariants}>Item 4 </motion.li>
-                <motion.li variants={itemVariants}>Item 5 </motion.li>
+                <motion.li  variants={itemVariants}>Item 1 </motion.li>
+                <motion.li  variants={itemVariants}>Item 2 </motion.li>
+                <motion.li  variants={itemVariants}>Item 3 </motion.li>
+                <motion.li  variants={itemVariants}>Item 4 </motion.li>
+                <motion.li  variants={itemVariants}>Item 5 </motion.li>
             </motion.ul>
         </motion.nav>
     );

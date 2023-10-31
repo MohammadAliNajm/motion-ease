@@ -24,13 +24,15 @@ const SuccessSvg = () => {
     return (
 
         <motion.svg
-          
-           width={'50'}
-           height={25}
+
+            width={'50'}
+            height={25}
             viewBox="0 0 100 100"
             xmlns="http://www.w3.org/2000/svg"
         >
-            <motion.circle variants={circleVariants} initial="hidden" animate="visible" cx="50%" cy="50%" r="40%" fill="none" stroke="white" strokeWidth="2" />
+            <motion.circle variants={circleVariants} initial="hidden" animate="visible" cx="50%" cy="50%" r="40%" fill="none" stroke="white" strokeWidth="4" transition={{
+                duration: 0.5
+            }} />
 
             <motion.path
                 initial="hidden"
@@ -39,7 +41,10 @@ const SuccessSvg = () => {
                 d="M30 50 L45 65 L70 40"
                 fill="none"
                 stroke="white"
-                strokeWidth="2"
+                strokeWidth="4"
+                transition={{
+                    duration: 0.75
+                }}
                 strokeLinecap="round"
             />
         </motion.svg>
